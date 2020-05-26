@@ -1,0 +1,1 @@
+Place GloVe weights in this folder
