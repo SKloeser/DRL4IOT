@@ -17,4 +17,4 @@ Linux:\
 
 
 ## Model training
-Step by Step training example can be found in Traininf.ipynb notebook.
+Step by Step training example can be found in Training.ipynb notebook.
