@@ -7,8 +7,15 @@ class GloveObsWrapper(gym.Wrapper):
         env = gym_env
         self.glove = self.loadGloveModel(glove_model_path)
         super(GloveObsWrapper, self).__init__(env)
+        print("shape", env.observation_space.shape) 
         high = np.ones(len(self.unwrapped.observation_space.sample()) * len(self.glove["0"])) * 100
         self.observation_space = gym.spaces.Box(-high, high)
+        # Adapt the observation_space to the observations.
+        # the observation space has still the shape for the unrapped observations: 4 ints
+        # reset the environment to get a dummy observation for the first dimension
+        # use entry "0" in the glove-model to get the second dimension
+        obs_dummy = env.reset()
+        self.observation_space.shape = (len(obs_dummy), len(self.glove["0"]))
         self.unwrapped.observation_space = gym.spaces.Box(-high, high)
 
     def step(self, action):
