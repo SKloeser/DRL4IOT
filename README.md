@@ -1,7 +1,7 @@
 # DRL4IOT scap-2020-code-release
 
 This is the supplemental material to the paper "DRL for IoT Interoperability" found on: 
-https://www.researchgate.net/publication/341641724_Deep_Reinforcement_Learning_for_IoT_Interoperability
+https://link.springer.com/chapter/10.1007/978-3-662-62962-8_23
 
 ## Setup
 Follow these steps to setup the repository:
